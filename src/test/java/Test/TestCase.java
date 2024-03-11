@@ -109,8 +109,8 @@ public class TestCase  {
             Thread.sleep(5000);
             saveButton.click();                
             //Close workbook
-			FileOutputStream fileOut = new FileOutputStream(Filename);
-			workbook.write(fileOut);
+	    FileOutputStream fileOut = new FileOutputStream(Filename);
+	    workbook.write(fileOut);
 			fileOut.close();
 			workbook.close();			
 			//Create object of dashboard page
