@@ -111,25 +111,25 @@ public class TestCase  {
             //Close workbook
 	    FileOutputStream fileOut = new FileOutputStream(Filename);
 	    workbook.write(fileOut);
-			fileOut.close();
-			workbook.close();			
-			//Create object of dashboard page
-			DashboardPage dashboardpage = new DashboardPage(driver);
-			//Test Case 47 & 48
-			dashboardpage.admin();
-			dashboardpage.button();
-			//Test Case 57
-			dashboardpage.username("Admin");
-			//Test Case 60
-			dashboardpage.role();
-			//Test Case 72
-			dashboardpage.employee(Employee_Name);
-			//Test Case 76
-			dashboardpage.status();
-			dashboardpage.search();
-			//dashboardpage.reset();
-			//Verify Employee Name from excel sheet with Employee Name in Admin/User Management and take screenshot 
-			WebElement EmployeeName = driver.findElement(By.xpath("//div[@class='oxd-autocomplete-wrapper']/div/input"));
+	    fileOut.close();
+	    workbook.close();			
+	    //Create object of dashboard page
+	    DashboardPage dashboardpage = new DashboardPage(driver);
+	    //Test Case 47 & 48
+	    dashboardpage.admin();
+	    dashboardpage.button();
+	    //Test Case 57
+	    dashboardpage.username("Admin");
+	    //Test Case 60
+	    dashboardpage.role();
+	    //Test Case 72
+	    dashboardpage.employee(Employee_Name);
+	    //Test Case 76
+	    dashboardpage.status();
+	    dashboardpage.search();
+	    //dashboardpage.reset();
+	    //Verify Employee Name from excel sheet with Employee Name in Admin/User Management and take screenshot 
+	    WebElement EmployeeName = driver.findElement(By.xpath("//div[@class='oxd-autocomplete-wrapper']/div/input"));
 			if(EmployeeName.equals(Employee_Name))
 			{
 			   System.out.println("Employee Name in admin is correct");
@@ -138,9 +138,9 @@ public class TestCase  {
 			{
 				System.out.println("Employee Name in admin is not correct. Unable to fetch employee full name from my info details ");
 				TakesScreenshot srceenshot = ((TakesScreenshot)driver);
-           	    File srcfile = srceenshot.getScreenshotAs(OutputType.FILE);
-                File Destination = new File("C:\\Users\\Gaurav\\Documents\\Srceenshot\\OrangeHRMAdmin.png");
-                FileHandler.copy(srcfile, Destination);
+           	  	        File srcfile = srceenshot.getScreenshotAs(OutputType.FILE);
+                                File Destination = new File("C:\\Users\\Gaurav\\Documents\\Srceenshot\\OrangeHRMAdmin.png");
+                                FileHandler.copy(srcfile, Destination);
 			}
 			//Test Case 107
 			dashboardpage.job();
